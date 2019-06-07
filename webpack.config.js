@@ -1,6 +1,8 @@
-var path = require('path');
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+    mode: "production",
     entry: path.join(__dirname, 'src', 'app.tsx'),
     output: {
         path: path.join(__dirname, 'dist'),
@@ -10,6 +12,11 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     devtool: 'source-map',
+    plugins: [
+        new CopyPlugin([
+            { from: './src/assets/index.html', to: './' },
+        ]),
+    ],
     module: {
         rules: [
             {

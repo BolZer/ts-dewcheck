@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build-assets": "webpack",
     "dev": "webpack-dev-server --inline --hot --progress --content-base src/assets"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/bootstrap": "^4.3.0",
     "@types/jquery": "^3.3.29",
     "@types/lockr": "^0.8.6",
@@ -17,11 +18,15 @@
     "@types/react-router": "^5.0.1",
     "@types/react-router-dom": "^4.3.3",
     "@types/redux": "^3.6.0",
-    "animate.css": "^3.7.0",
     "awesome-typescript-loader": "^5.2.1",
-    "bootstrap": "^4.3.1",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
     "file-loader": "^4.0.0",
+    "url-loader": "^2.0.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "lockr": "^0.8.5",
     "lodash": "^4.17.11",
@@ -36,7 +41,6 @@
     "style-loader": "^0.23.1",
     "tslint": "^5.17.0",
     "typescript": "^3.5.1",
-    "url-loader": "^2.0.0",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.7.0"
