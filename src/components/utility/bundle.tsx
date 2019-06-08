@@ -15,7 +15,7 @@ export class Bundle extends React.Component<BundleProps, {}> {
             <div className='row'>
                 <div className='col-9'>
                     <label className='app-checkbox-container'>
-                        <img alt={'bundle icon'} src={this.props.bundle.icon_url} className='d-none d-sm-inline-block img-fluid mr-2'/>
+                        <img alt={'bundle icon'} src={this.props.bundle.icon_url} className='app-bundle-icon d-inline-block img-fluid mr-2'/>
                         {this.props.bundle.description}
                         <input type='checkbox' checked={this.props.bundle.checked} onChange={(): StoreActionTypes => this.props.checkAction(this.props.bundle)}/>
                         <span className='app-checkmark'/>

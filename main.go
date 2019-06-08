@@ -16,14 +16,14 @@ func main() {
 
 	server := &http.Server{
 		Handler:      createMuxAndRegisterRoutes(),
-		Addr:         "127.0.0.1:8000",
+		Addr:         "dewcheck.bolzer.dev:443",
 		WriteTimeout: 10 * time.Second,
 		ReadTimeout:  10 * time.Second,
 	}
 
-	fmt.Println("Server runnning at " + "http://" + server.Addr)
+	fmt.Println("Server runnning at " + "https://" + server.Addr)
 
-	if err := server.ListenAndServe(); err != nil {
+	if err := server.ListenAndServeTLS("server.crt", "server.key"); err != nil {
 		panic(err)
 	}
 }

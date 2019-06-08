@@ -2,17 +2,24 @@ import * as React from 'react';
 import {combineReducers, createStore, Store} from 'redux';
 import {boiler, bulletin, craft, fishTank, pantry, vault} from './reducers';
 import {StoreState} from './types';
+
+import * as BundleBlueImage from '../assets/img/bundles/bundle_blue.png';
+import * as BundleGreenImage from '../assets/img/bundles/bundle_green.png';
+import * as BundleOrangeImage from '../assets/img/bundles/bundle_orange.png';
+import * as BundlePurpleImage from '../assets/img/bundles/bundle_purple.png';
+import * as BundleRedImage from '../assets/img/bundles/bundle_red.png';
+import * as BundleTealImage from '../assets/img/bundles/bundle_teal.png';
+import * as BundleYellowImage from '../assets/img/bundles/bundle_yellow.png';
+
+import * as TestResourceImage from '../assets/img/resources/bundle_resource_bat_wing.png';
+import * as DaffodilImage from '../assets/img/resources/bundle_resource_daffodil.png';
+import * as DandelionImage from '../assets/img/resources/bundle_resource_dandelion.png';
+import * as GrapeImage from '../assets/img/resources/bundle_resource_grape.png';
+import * as LeekImage from '../assets/img/resources/bundle_resource_leek.png';
+import * as SpiceBerryImage from '../assets/img/resources/bundle_resource_spice_berry.png';
+import * as SweetPeaImage from '../assets/img/resources/bundle_resource_sweet_pea.png';
+import * as WildHorseradishImage from '../assets/img/resources/bundle_resource_wild_horseradish.png';
 import LockrStatic = lockr.LockrStatic;
-
-const BundleBlueImage: string = require('../assets/img/bundles/bundle_blue.png');
-const BundleRedImage: string = require('../assets/img/bundles/bundle_red.png');
-const BundleGreenImage: string = require('../assets/img/bundles/bundle_green.png');
-const BundleOrangeImage: string = require('../assets/img/bundles/bundle_orange.png');
-const BundlePurpleImage: string = require('../assets/img/bundles/bundle_purple.png');
-const BundleTealImage: string = require('../assets/img/bundles/bundle_teal.png');
-const BundleYellowImage: string = require('../assets/img/bundles/bundle_yellow.png');
-
-const TestResourceImage: string = require('../assets/img/resources/bundle_resource_bat_wing.png');
 
 export const CHECK_PANTRY_BUNDLE: string = 'CHECK_PANTRY_BUNDLE';
 export const CHECK_CRAFT_BUNDLE: string = 'CHECK_CRAFT_BUNDLE';
@@ -32,19 +39,19 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: 'Wild Horseradish',
-                    icon_url: TestResourceImage,
+                    icon_url: WildHorseradishImage,
                     wiki_url: 'https://stardewvalleywiki.com/Wild_Horseradish'
                 }, {
                     description: 'Daffodil',
-                    icon_url: TestResourceImage,
+                    icon_url: DaffodilImage,
                     wiki_url: 'https://stardewvalleywiki.com/Daffodil'
                 }, {
                     description: 'Leek',
-                    icon_url: TestResourceImage,
+                    icon_url: LeekImage,
                     wiki_url: 'https://stardewvalleywiki.com/Leek'
                 }, {
                     description: 'Dandelion',
-                    icon_url: TestResourceImage,
+                    icon_url: DandelionImage,
                     wiki_url: 'https://stardewvalleywiki.com/Dandelion'
                 }
             ]
@@ -56,15 +63,15 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: 'Grape',
-                    icon_url: TestResourceImage,
+                    icon_url: GrapeImage,
                     wiki_url: 'https://stardewvalleywiki.com/Grape'
                 }, {
                     description: 'Spice Berry',
-                    icon_url: TestResourceImage,
+                    icon_url: SpiceBerryImage,
                     wiki_url: 'https://stardewvalleywiki.com/Spice_Berry'
                 }, {
                     description: 'Sweet Pea',
-                    icon_url: TestResourceImage,
+                    icon_url: SweetPeaImage,
                     wiki_url: 'https://stardewvalleywiki.com/Sweet_Pea'
                 }
             ]

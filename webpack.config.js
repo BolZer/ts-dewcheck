@@ -15,6 +15,7 @@ module.exports = {
     plugins: [
         new CopyPlugin([
             { from: './src/assets/index.html', to: './' },
+            { from: './src/assets/favicon/', to: './favicon/' },
         ]),
     ],
     module: {
@@ -57,7 +58,7 @@ module.exports = {
             chunks: false,
             chunkModules: false,
             chunkOrigins: false,
-            modules: false
+            modules: false,
         }
     }
 };
