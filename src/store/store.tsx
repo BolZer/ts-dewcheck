@@ -2,7 +2,6 @@ import * as React from 'react';
 import {combineReducers, createStore, Store} from 'redux';
 import {boiler, bulletin, craft, fishTank, pantry, vault} from './reducers';
 import {StoreState} from './types';
-
 import * as BundleBlueImage from '../assets/img/bundles/bundle_blue.png';
 import * as BundleGreenImage from '../assets/img/bundles/bundle_green.png';
 import * as BundleOrangeImage from '../assets/img/bundles/bundle_orange.png';
@@ -19,7 +18,48 @@ import * as LeekImage from '../assets/img/resources/bundle_resource_leek.png';
 import * as SpiceBerryImage from '../assets/img/resources/bundle_resource_spice_berry.png';
 import * as SweetPeaImage from '../assets/img/resources/bundle_resource_sweet_pea.png';
 import * as WildHorseradishImage from '../assets/img/resources/bundle_resource_wild_horseradish.png';
-import LockrStatic = lockr.LockrStatic;
+
+import * as CauliflowerImage from '../assets/img/resources/bundle_resource_cauliflower.png';
+import * as GreenBeanImage from '../assets/img/resources/bundle_resource_green_bean.png';
+import * as ParsnipImage from '../assets/img/resources/bundle_resource_parsnip.png';
+import * as PotatoImage from '../assets/img/resources/bundle_resource_potato.png';
+
+import * as BlueberryImage from '../assets/img/resources/bundle_resource_blueberry.png';
+import * as HotPepperImage from '../assets/img/resources/bundle_resource_hot_pepper.png';
+import * as MelonImage from '../assets/img/resources/bundle_resource_melon.png';
+import * as TomatoImage from '../assets/img/resources/bundle_resource_tomato.png';
+
+import * as CornImage from '../assets/img/resources/bundle_resource_corn.png';
+import * as EggplantImage from '../assets/img/resources/bundle_resource_eggplant.png';
+import * as PumpkinImage from '../assets/img/resources/bundle_resource_pumpkin.png';
+import * as YamImage from '../assets/img/resources/bundle_resource_yam.png';
+
+import * as DuckEggImage from '../assets/img/resources/bundle_resource_duck_egg.png';
+import * as LargeEggBrownImage from '../assets/img/resources/bundle_resource_large_brown_egg.png';
+import * as LargeEggImage from '../assets/img/resources/bundle_resource_large_egg.png';
+import * as LargeGoatMilkImage from '../assets/img/resources/bundle_resource_large_goat_milk.png';
+import * as LargeMilkImage from '../assets/img/resources/bundle_resource_large_milk.png';
+import * as WoolImage from '../assets/img/resources/bundle_resource_wool.png';
+
+import * as AppleImage from '../assets/img/resources/bundle_resource_apple.png';
+import * as ApricotImage from '../assets/img/resources/bundle_resource_apricot.png';
+import * as CheeseImage from '../assets/img/resources/bundle_resource_cheese.png';
+import * as CherryImage from '../assets/img/resources/bundle_resource_cherry.png';
+import * as ClothImage from '../assets/img/resources/bundle_resource_cloth.png';
+import * as GoatCheeseImage from '../assets/img/resources/bundle_resource_goat_cheese.png';
+import * as GoldImage from '../assets/img/resources/bundle_resource_gold.png';
+import * as HoneyImage from '../assets/img/resources/bundle_resource_honey.png';
+import * as JellyImage from '../assets/img/resources/bundle_resource_jelly.png';
+import * as OrangeImage from '../assets/img/resources/bundle_resource_orange.png';
+import * as PeachImage from '../assets/img/resources/bundle_resource_peach.png';
+import * as PomegranateImage from '../assets/img/resources/bundle_resource_pomegranate.png';
+import * as TruffleOilImage from '../assets/img/resources/bundle_resource_truffle_oil.png';
+
+import * as CopperBarImage from '../assets/img/resources/bundle_resource_copper_bar.png';
+import * as GoldBarImage from '../assets/img/resources/bundle_resource_gold_bar.png';
+import * as IronBarImage from '../assets/img/resources/bundle_resource_iron_bar.png';
+
+import * as lockr from 'lockr';
 
 export const CHECK_PANTRY_BUNDLE: string = 'CHECK_PANTRY_BUNDLE';
 export const CHECK_CRAFT_BUNDLE: string = 'CHECK_CRAFT_BUNDLE';
@@ -27,8 +67,6 @@ export const CHECK_BOILER_BUNDLE: string = 'CHECK_BOILER_BUNDLE';
 export const CHECK_VAULT_BUNDLE: string = 'CHECK_VAULT_BUNDLE';
 export const CHECK_FISH_TANK_BUNDLE: string = 'CHECK_FISH_TANK_BUNDLE';
 export const CHECK_BULLETIN_BUNDLE: string = 'CHECK_BULLETIN_BUNDLE';
-
-const lockr: LockrStatic = require('lockr');
 
 export const appState: StoreState = {
     craft: [
@@ -200,19 +238,19 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: 'Parsnip',
-                    icon_url: TestResourceImage,
+                    icon_url: ParsnipImage,
                     wiki_url: 'https://stardewvalleywiki.com/Parsnip'
                 }, {
                     description: 'Green Bean',
-                    icon_url: TestResourceImage,
+                    icon_url: GreenBeanImage,
                     wiki_url: 'https://stardewvalleywiki.com/Green_Bean'
                 }, {
                     description: 'Cauliflower',
-                    icon_url: TestResourceImage,
+                    icon_url: CauliflowerImage,
                     wiki_url: 'https://stardewvalleywiki.com/Cauliflower'
                 }, {
                     description: 'Potato',
-                    icon_url: TestResourceImage,
+                    icon_url: PotatoImage,
                     wiki_url: 'https://stardewvalleywiki.com/Potato'
                 }
             ]
@@ -224,19 +262,19 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: 'Tomato',
-                    icon_url: TestResourceImage,
+                    icon_url: TomatoImage,
                     wiki_url: 'https://stardewvalleywiki.com/Tomato'
                 }, {
                     description: 'Hot Pepper',
-                    icon_url: TestResourceImage,
+                    icon_url: HotPepperImage,
                     wiki_url: 'https://stardewvalleywiki.com/Hot_Pepper'
                 }, {
                     description: 'Blueberry',
-                    icon_url: TestResourceImage,
+                    icon_url: BlueberryImage,
                     wiki_url: 'https://stardewvalleywiki.com/Blueberry'
                 }, {
                     description: 'Melon',
-                    icon_url: TestResourceImage,
+                    icon_url: MelonImage,
                     wiki_url: 'https://stardewvalleywiki.com/Melon'
                 }
             ]
@@ -248,19 +286,19 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: 'Corn',
-                    icon_url: TestResourceImage,
+                    icon_url: CornImage,
                     wiki_url: 'https://stardewvalleywiki.com/Corn'
                 }, {
                     description: 'Eggplant',
-                    icon_url: TestResourceImage,
+                    icon_url: EggplantImage,
                     wiki_url: 'https://stardewvalleywiki.com/Eggplant'
                 }, {
                     description: 'Pumpkin',
-                    icon_url: TestResourceImage,
+                    icon_url: PumpkinImage,
                     wiki_url: 'https://stardewvalleywiki.com/Pumpkin'
                 }, {
                     description: 'Yam',
-                    icon_url: TestResourceImage,
+                    icon_url: YamImage,
                     wiki_url: 'https://stardewvalleywiki.com/Yam'
                 }
             ]
@@ -272,105 +310,107 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: '5 x Parsnip (Gold Quality)',
-                    icon_url: TestResourceImage,
+                    icon_url: ParsnipImage,
                     wiki_url: 'https://stardewvalleywiki.com/Parsnip'
                 }, {
                     description: '5 x Melon (Gold Quality)',
-                    icon_url: TestResourceImage,
+                    icon_url: MelonImage,
                     wiki_url: 'https://stardewvalleywiki.com/Melon'
                 }, {
                     description: '5 x Pumpkin (Gold Quality)',
-                    icon_url: TestResourceImage,
+                    icon_url: PumpkinImage,
                     wiki_url: 'https://stardewvalleywiki.com/Pumpkin'
                 }, {
                     description: '5 x Corn (Gold Quality)',
-                    icon_url: TestResourceImage,
+                    icon_url: CornImage,
                     wiki_url: 'https://stardewvalleywiki.com/Corn'
                 }
             ]
-        }, {
+        },
+        {
             checked: false,
             description: 'Animal Bundle',
             icon_url: BundleRedImage,
             resources: [
                 {
                     description: 'Large Milk',
-                    icon_url: TestResourceImage,
+                    icon_url: LargeMilkImage,
                     wiki_url: 'https://stardewvalleywiki.com/Large_Milk'
                 }, {
                     description: 'Large Egg (Brown)',
-                    icon_url: TestResourceImage,
+                    icon_url: LargeEggBrownImage,
                     wiki_url: 'https://stardewvalleywiki.com/Large_Egg'
                 }, {
                     description: 'Large Egg',
-                    icon_url: TestResourceImage,
+                    icon_url: LargeEggImage,
                     wiki_url: 'https://stardewvalleywiki.com/Large_Egg'
                 }, {
                     description: 'Large Goat Milk',
-                    icon_url: TestResourceImage,
+                    icon_url: LargeGoatMilkImage,
                     wiki_url: 'https://stardewvalleywiki.com/Large_Goat_Milk'
                 }, {
                     description: 'Wool',
-                    icon_url: TestResourceImage,
+                    icon_url: WoolImage,
                     wiki_url: 'https://stardewvalleywiki.com/Wool'
                 }, {
                     description: 'Duck Egg',
-                    icon_url: TestResourceImage,
+                    icon_url: DuckEggImage,
                     wiki_url: 'https://stardewvalleywiki.com/Duck_Egg'
                 }
             ]
-        }, {
+        },
+        {
             checked: false,
             description: 'Artisan Bundle',
             icon_url: BundlePurpleImage,
             resources: [
                 {
                     description: 'Truffle Oil',
-                    icon_url: TestResourceImage,
+                    icon_url: TruffleOilImage,
                     wiki_url: 'https://stardewvalleywiki.com/Truffle_Oil'
                 }, {
                     description: 'Cloth',
-                    icon_url: TestResourceImage,
+                    icon_url: ClothImage,
                     wiki_url: 'https://stardewvalleywiki.com/Cloth'
                 }, {
                     description: 'Goat Cheese',
-                    icon_url: TestResourceImage,
+                    icon_url: GoatCheeseImage,
                     wiki_url: 'https://stardewvalleywiki.com/Goat_Cheese'
                 }, {
                     description: 'Cheese',
-                    icon_url: TestResourceImage,
+                    icon_url: CheeseImage,
                     wiki_url: 'https://stardewvalleywiki.com/Cheese'
                 }, {
                     description: 'Honey',
-                    icon_url: TestResourceImage,
+                    icon_url: HoneyImage,
                     wiki_url: 'https://stardewvalleywiki.com/Honey'
                 }, {
                     description: 'Jelly',
-                    icon_url: TestResourceImage,
+                    icon_url: JellyImage,
                     wiki_url: 'https://stardewvalleywiki.com/Jelly'
                 }, {
                     description: 'Apple',
-                    icon_url: TestResourceImage,
+                    icon_url: AppleImage,
                     wiki_url: 'https://stardewvalleywiki.com/Apple'
                 }, {
                     description: 'Apricot',
-                    icon_url: TestResourceImage,
+                    icon_url: ApricotImage,
                     wiki_url: 'https://stardewvalleywiki.com/Apricot'
                 }, {
                     description: 'Orange',
-                    icon_url: TestResourceImage,
+                    icon_url: OrangeImage,
                     wiki_url: 'https://stardewvalleywiki.com/Orange'
                 }, {
                     description: 'Peach',
-                    icon_url: TestResourceImage,
+                    icon_url: PeachImage,
                     wiki_url: 'https://stardewvalleywiki.com/Peach'
                 }, {
                     description: 'Pomegranate',
-                    icon_url: TestResourceImage,
+                    icon_url: PomegranateImage,
                     wiki_url: 'https://stardewvalleywiki.com/Pomegranate'
                 }, {
                     description: 'Cherry',
-                    icon_url: TestResourceImage,
+                    icon_url: CherryImage,
                     wiki_url: 'https://stardewvalleywiki.com/Cherry'
                 }
             ]
@@ -384,15 +424,15 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: 'Copper Bar',
-                    icon_url: TestResourceImage,
+                    icon_url: CopperBarImage,
                     wiki_url: 'https://stardewvalleywiki.com/Copper_Bar'
                 }, {
                     description: 'Iron Bar',
-                    icon_url: TestResourceImage,
+                    icon_url: IronBarImage,
                     wiki_url: 'https://stardewvalleywiki.com/Iron_Bar'
                 }, {
                     description: 'Gold Bar',
-                    icon_url: TestResourceImage,
+                    icon_url: GoldBarImage,
                     wiki_url: 'https://stardewvalleywiki.com/Gold_Bar'
                 }
             ]
@@ -454,7 +494,7 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: '2.500g',
-                    icon_url: TestResourceImage,
+                    icon_url: GoldImage,
                     wiki_url: ''
                 }
             ]
@@ -466,7 +506,7 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: '5.000g',
-                    icon_url: TestResourceImage,
+                    icon_url: GoldImage,
                     wiki_url: ''
                 }
             ]
@@ -478,7 +518,7 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: '10.000g',
-                    icon_url: TestResourceImage,
+                    icon_url: GoldImage,
                     wiki_url: ''
                 }
             ]
@@ -490,7 +530,7 @@ export const appState: StoreState = {
             resources: [
                 {
                     description: '25.000g',
-                    icon_url: TestResourceImage,
+                    icon_url: GoldImage,
                     wiki_url: ''
                 }
             ]

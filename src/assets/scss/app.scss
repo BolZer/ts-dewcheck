@@ -3,7 +3,6 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: $background-primary;
   color: $color;
   font-size: 18px;
   font-weight: 700;
@@ -61,16 +60,10 @@ body {
   height: 100vh;
   width: 100%;
 
-  .app-mask {
-    background: rgba(0, 0, 0, 0.30);
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-  }
-
   .app-background {
+    background: #3a7bd5;
+    background: -webkit-linear-gradient(to top, #3a6073, #3a7bd5);
+    background: linear-gradient(to top, #3a6073, #3a7bd5);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-attachment: fixed;

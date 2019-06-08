@@ -16,23 +16,18 @@ import {FishTank} from './components/step/tank';
 import {Vault} from './components/step/vault';
 import store from './store/store';
 
-const AppImage: string = require('./assets/img/background.jpg');
-
-export class App extends React.Component<{}, {}> {
+class App extends React.Component<{}, {}> {
     public render(): JSX.Element {
         return <Router>
             <div className='app-container'>
-                <div className='app-mask'/>
-                <div className='app-background' style={{
-                    backgroundImage: 'url(' + AppImage + ')'
-                }}/>
+                <div className='app-background'/>
                 <TopMenu/>
                 <div className='row h-100'>
                     <div className='col-12 d-flex flex-column justify-content-center align-items-center'
                          style={{paddingTop: '60px', paddingBottom: '60px'}}
                     >
                         <Provider store={store}>
-                            <Route exact path='/' component={Overview}/>
+                            <Route exact={true} path='/' component={Overview}/>
                             <Route path='/pantry' component={Pantry}/>
                             <Route path='/vault' component={Vault}/>
                             <Route path='/craft' component={Craft}/>

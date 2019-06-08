@@ -1,17 +1,17 @@
 import * as React from 'react';
 import {ComponentClass} from 'react';
 import {connect} from 'react-redux';
-import {OverviewPanel} from '../utility/overview_panel';
 import {BundleModel, StoreState} from '../../store/types';
+import {OverviewPanel} from '../utility/overview_panel';
 
-const PantryStepImage: string = require('../../assets/img/pantry/bundle_main_alt.png');
-const CraftsStepImage: string = require('../../assets/img/crafts/bundle_main_alt.png');
-const BoilerStepImage: string = require('../../assets/img/boiler/bundle_main_alt.png');
-const VaultStepImage: string = require('../../assets/img/vault/bundle_main_alt.png');
-const FishTankStepImage: string = require('../../assets/img/tank/bundle_main_alt.png');
-const BulletinStepImage: string = require('../../assets/img/bulletin/bundle_main_alt.png');
+import * as BoilerStepImage from '../../assets/img/boiler/bundle_main_alt.png';
+import * as BulletinStepImage from '../../assets/img/bulletin/bundle_main_alt.png';
+import * as CraftsStepImage from '../../assets/img/crafts/bundle_main_alt.png';
+import * as PantryStepImage from '../../assets/img/pantry/bundle_main_alt.png';
+import * as FishTankStepImage from '../../assets/img/tank/bundle_main_alt.png';
+import * as VaultStepImage from '../../assets/img/vault/bundle_main_alt.png';
 
-interface OverviewProps {
+interface IOverviewProps {
     pantryBundles: BundleModel[];
     craftsBundles: BundleModel[];
     boilerBundles: BundleModel[];
@@ -20,7 +20,7 @@ interface OverviewProps {
     bulletinBoardBundles: BundleModel[];
 }
 
-class OverviewComponent extends React.Component<OverviewProps, {}> {
+class OverviewComponent extends React.Component<IOverviewProps, {}> {
     public render(): JSX.Element {
         return <div className={'row animated fadeIn w-100'}>
             <div className={'col-sm-12'}>
@@ -78,14 +78,14 @@ class OverviewComponent extends React.Component<OverviewProps, {}> {
 }
 
 export const Overview: ComponentClass<Pick<{}, never>, {}> = connect(
-    (state: StoreState): OverviewProps => {
+    (state: StoreState): IOverviewProps => {
         return {
-            pantryBundles: state.pantry,
-            craftsBundles: state.craft,
             boilerBundles: state.boiler,
-            vaultBundles: state.vault,
+            bulletinBoardBundles: state.bulletin,
+            craftsBundles: state.craft,
             fishTankBundles: state.fishTank,
-            bulletinBoardBundles: state.bulletin
+            pantryBundles: state.pantry,
+            vaultBundles: state.vault,
         };
     }
 )(OverviewComponent);

@@ -7,3 +7,6 @@ clean:
 
 build: clean
 	npm run build-assets && packr2 build -o app --v && packr2 clean && rm -rf ./dist/*
+
+test:
+	npm run test

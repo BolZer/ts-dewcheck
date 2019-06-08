@@ -14,10 +14,11 @@ interface OverviewProps {
 export class OverviewPanel extends React.Component<OverviewProps, {}> {
     public render(): JSX.Element {
         return <Link className={'row mt-4 text-light'} style={{textDecoration: 'none'}} to={this.props.route}>
-            <div className='d-none d-sm-none d-md-flex offset-md-0 col-md-2 offset-lg-1 col-lg-2 flex-row align-items-center justify-content-center'>
+            <div
+                className='d-none d-sm-none d-md-flex offset-md-0 col-md-2 offset-lg-1 col-lg-2 flex-row align-items-center justify-content-center'>
                 <img width='125' className='app-main-image' alt='Crafts Main Image' src={this.props.imgSrc}/>
             </div>
-            <div className='col-12 col-sm-12 col-md-10 col-lg-7 card'>
+            <div className='col-12 col-sm-12 col-md-10 col-lg-8 card'>
                 <div className='row card-body'>
                     <div className='col-sm-12 card-text text-dark'>
                         <div className='row'>
@@ -28,7 +29,9 @@ export class OverviewPanel extends React.Component<OverviewProps, {}> {
                                 </h3>
                             </div>
                             <div className='col-3 col-sm-3 text-right'>
-                                <h5>{this.props.active}/{this.props.count}</h5>
+                                <h5>
+                                    {this.getProgressAsString()}
+                                </h5>
                             </div>
                         </div>
                     </div>
@@ -38,5 +41,14 @@ export class OverviewPanel extends React.Component<OverviewProps, {}> {
                 </div>
             </div>
         </Link>;
+    }
+
+    private getProgressAsString(): JSX.Element {
+
+        if ((this.props.active / this.props.count) === 1) {
+            return <span className='font-weight-bold text-success'>Done</span>;
+        }
+
+        return <span className='font-weight-bold'>{this.props.active + '/' + this.props.count}</span>;
     }
 }
