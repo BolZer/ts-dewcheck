@@ -16,7 +16,7 @@ func main() {
 
 	server := &http.Server{
 		Handler:      createMuxAndRegisterRoutes(),
-		Addr:         "dewcheck.bolzer.dev:443",
+		Addr:         "dewcheck.dev:443",
 		WriteTimeout: 10 * time.Second,
 		ReadTimeout:  10 * time.Second,
 	}

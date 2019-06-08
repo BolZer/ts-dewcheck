@@ -25,7 +25,7 @@ class OverviewComponent extends React.Component<OverviewProps, {}> {
         return <div className={'row animated fadeIn w-100'}>
             <div className={'col-sm-12'}>
                 <OverviewPanel
-                    icon={<i className='fas d-none d-sm-inline fa-fw fa-apple-crate mr-2'/>}
+                    icon={<i className='fas d-inline fa-fw fa-apple-crate mr-2'/>}
                     title={'Pantry Room'}
                     imgSrc={PantryStepImage}
                     active={this.props.pantryBundles.filter((bundle: BundleModel) => bundle.checked === true).length}
@@ -33,7 +33,7 @@ class OverviewComponent extends React.Component<OverviewProps, {}> {
                     route={'/pantry'}
                 />
                 <OverviewPanel
-                    icon={<i className='fas d-none d-sm-inline fa-fw fa-sack-dollar mr-2'/>}
+                    icon={<i className='fas d-inline fa-fw fa-sack-dollar mr-2'/>}
                     title={'Vault'}
                     imgSrc={VaultStepImage}
                     active={this.props.vaultBundles.filter((bundle: BundleModel) => bundle.checked === true).length}
@@ -41,7 +41,7 @@ class OverviewComponent extends React.Component<OverviewProps, {}> {
                     route={'/vault'}
                 />
                 <OverviewPanel
-                    icon={<i className='fas d-none d-sm-inline fa-fw fa-pencil-ruler mr-2'/>}
+                    icon={<i className='fas d-inline fa-fw fa-pencil-ruler mr-2'/>}
                     title={'Crafts Room'}
                     imgSrc={CraftsStepImage}
                     active={this.props.craftsBundles.filter((bundle: BundleModel) => bundle.checked === true).length}
@@ -49,7 +49,7 @@ class OverviewComponent extends React.Component<OverviewProps, {}> {
                     route={'/craft'}
                 />
                 <OverviewPanel
-                    icon={<i className='fas d-none d-sm-inline fa-fw fa-temperature-hot mr-2'/>}
+                    icon={<i className='fas d-inline fa-fw fa-temperature-hot mr-2'/>}
                     title={'Boiler Room'}
                     imgSrc={BoilerStepImage}
                     active={this.props.boilerBundles.filter((bundle: BundleModel) => bundle.checked === true).length}
@@ -57,7 +57,7 @@ class OverviewComponent extends React.Component<OverviewProps, {}> {
                     route={'/boiler'}
                 />
                 <OverviewPanel
-                    icon={<i className='fas d-none d-sm-inline fa-fw fa-fish mr-2'/>}
+                    icon={<i className='fas d-inline fa-fw fa-fish mr-2'/>}
                     title={'Fish Tank'}
                     imgSrc={FishTankStepImage}
                     active={this.props.fishTankBundles.filter((bundle: BundleModel) => bundle.checked === true).length}
@@ -65,7 +65,7 @@ class OverviewComponent extends React.Component<OverviewProps, {}> {
                     route={'/fishtank'}
                 />
                 <OverviewPanel
-                    icon={<i className='fas d-none d-sm-inline fa-fw fa-chalkboard mr-2'/>}
+                    icon={<i className='fas d-inline fa-fw fa-chalkboard mr-2'/>}
                     title={'Bulletin Board'}
                     imgSrc={BulletinStepImage}
                     active={this.props.bulletinBoardBundles.filter((bundle: BundleModel) => bundle.checked === true).length}

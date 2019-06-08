@@ -6,4 +6,4 @@ clean:
 	rm -rf ./ts-dewcheck
 
 build: clean
-	npm run build-assets && packr2 build --v && packr2 clean && rm -rf ./dist/*
+	npm run build-assets && packr2 build -o app --v && packr2 clean && rm -rf ./dist/*
